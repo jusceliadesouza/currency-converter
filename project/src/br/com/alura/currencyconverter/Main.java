@@ -8,19 +8,23 @@ public class Main {
         CurrencyConverter converter = new CurrencyConverter();
 
         while (true) {
-            System.out.println("Conversor de Moedas");
+            System.out.println("\n\nConversor de Moedas");
             System.out.println("1. Converter USD para EUR");
             System.out.println("2. Converter USD para GBP");
             System.out.println("3. Converter USD para AUD");
             System.out.println("4. Converter USD para CAD");
             System.out.println("5. Converter USD para CHF");
             System.out.println("6. Converter USD para CNY");
+            System.out.println("7. Ver Historico de Conversoes");
             System.out.println("0. Sair");
-            System.out.print("Escolha uma opção: ");
+            System.out.print("Escolha uma opçao: ");
             int choice = scanner.nextInt();
 
             if (choice == 0) {
                 break;
+            } else if (choice == 7) {
+                converter.printHistory();
+                continue;
             }
 
             System.out.print("Digite o valor em USD: ");
@@ -46,7 +50,7 @@ public class Main {
                     converter.convert("USD", "CNY", amount);
                     break;
                 default:
-                    System.out.println("Opção inválida!");
+                    System.out.println("Opção invalida!");
             }
         }
 
