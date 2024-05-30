@@ -15,14 +15,16 @@ public class Main {
             System.out.println("4. Converter USD para CAD");
             System.out.println("5. Converter USD para CHF");
             System.out.println("6. Converter USD para CNY");
-            System.out.println("7. Ver Historico de Conversoes");
+            System.out.println("7. Converter USD para BRL");
+            System.out.println("8. Converter USD para JPY");
+            System.out.println("9. Ver Historico de Conversoes");
             System.out.println("0. Sair");
             System.out.print("Escolha uma opçao: ");
             int choice = scanner.nextInt();
 
             if (choice == 0) {
                 break;
-            } else if (choice == 7) {
+            } else if (choice == 9) {
                 converter.printHistory();
                 continue;
             }
@@ -48,6 +50,12 @@ public class Main {
                     break;
                 case 6:
                     converter.convert("USD", "CNY", amount);
+                    break;
+                case 7:
+                    converter.convert("USD", "BRL", amount);
+                    break;
+                case 8:
+                    converter.convert("USD", "JPY", amount);
                     break;
                 default:
                     System.out.println("Opção invalida!");
